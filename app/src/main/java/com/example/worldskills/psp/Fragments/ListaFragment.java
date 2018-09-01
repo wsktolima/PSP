@@ -1,12 +1,23 @@
-package com.example.worldskills.psp;
+package com.example.worldskills.psp.Fragments;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.worldskills.psp.Clases.AdaptadorLista;
+import com.example.worldskills.psp.Clases.Proyecto;
+import com.example.worldskills.psp.ConexionDB;
+import com.example.worldskills.psp.R;
+
+import java.util.ArrayList;
 
 
 /**
@@ -26,6 +37,12 @@ public class ListaFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    RecyclerView lista_Proyectos;
+    AdaptadorLista adapter;
+    ArrayList<Proyecto> proyectos;
+    ConexionDB conexionDB;
+    SQLiteDatabase db;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +81,29 @@ public class ListaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lista, container, false);
+        View lista = inflater.inflate(R.layout.fragment_lista, container, false);
+
+        llenarLista();
+
+        lista_Proyectos = lista.findViewById(R.id.recycler);
+        lista_Proyectos.setLayoutManager(new LinearLayoutManager(null));
+        adapter = new AdaptadorLista(proyectos);
+        lista_Proyectos.setAdapter(adapter);
+
+        return lista;
+    }
+
+    public void  llenarLista(){
+        proyectos = new ArrayList<>();
+        conexionDB = new ConexionDB(getContext(), "PSP",null, 1);
+        db = conexionDB.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT nombreProyecto FROM Proyectos", null);
+
+        while (cursor.moveToNext()){
+            proyectos.add(new Proyecto(cursor.getString(0)));
+        }
+        cursor.close();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
