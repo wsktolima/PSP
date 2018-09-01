@@ -8,11 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".Activities.MenuActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="454dp"
-        android:layout_height="245dp"
-        app:srcCompat="@drawable/logofondoblanco" />
+
 
     <TextView
         android:id="@+id/texto"
