@@ -25,14 +25,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         t = findViewById(R.id.texto);
-        /*c = Calendar.getInstance();
-        int hora = c.get(Calendar.HOUR);
-        int min = c.get(Calendar.MINUTE);
 
-
-
-        String tiempo = valueOf(hora) +  ":" +valueOf(min);
-        t.setText(tiempo);*/
         Intent i = getIntent();
         nombre = i.getStringExtra("Nombre");
         t.setText(getNombre());
@@ -46,6 +39,10 @@ public class MenuActivity extends AppCompatActivity {
         return nombre;
     }
 
+    /**
+     * Metodo para dirigirse a Alguna Actividad
+     * @param view
+     */
     public void irA(View view){
         Intent i = null;
 
