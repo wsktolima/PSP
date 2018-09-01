@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.worldskills.psp.Clases.AdaptadorLista;
 import com.example.worldskills.psp.Clases.Proyecto;
@@ -89,6 +90,12 @@ public class ListaFragment extends Fragment {
         lista_Proyectos.setLayoutManager(new LinearLayoutManager(null));
         adapter = new AdaptadorLista(proyectos);
         lista_Proyectos.setAdapter(adapter);
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), lista_Proyectos.getChildAdapterPosition(v), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return lista;
     }
