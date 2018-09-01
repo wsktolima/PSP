@@ -1,6 +1,7 @@
 package com.example.worldskills.psp.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.worldskills.psp.Activities.MenuActivity;
 import com.example.worldskills.psp.Clases.AdaptadorLista;
 import com.example.worldskills.psp.Clases.Proyecto;
 import com.example.worldskills.psp.ConexionDB;
@@ -83,7 +85,7 @@ public class ListaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View lista = inflater.inflate(R.layout.fragment_lista, container, false);
-
+        proyectos = new ArrayList<>();
         llenarLista();
 
         lista_Proyectos = lista.findViewById(R.id.recycler);
@@ -93,7 +95,9 @@ public class ListaFragment extends Fragment {
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), lista_Proyectos.getChildAdapterPosition(v), Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getContext(), MenuActivity.class);
+                i.putExtra("Nombre", proyectos.get(lista_Proyectos.getChildAdapterPosition(v)).getNombreProyecto());
+                startActivity(i);
             }
         });
 
@@ -101,7 +105,7 @@ public class ListaFragment extends Fragment {
     }
 
     public void  llenarLista(){
-        proyectos = new ArrayList<>();
+
         conexionDB = new ConexionDB(getContext(), "PSP",null, 1);
         db = conexionDB.getWritableDatabase();
 

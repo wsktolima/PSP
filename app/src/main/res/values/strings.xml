@@ -5,4 +5,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ph_plan">PLAN</string>
+    <string name="ph_dld">DLD</string>
+    <string name="ph_code">CODE</string>
+    <string name="ph_compile">COMPILE</string>
+    <string name="ph_ut">UT</string>
+    <string name="ph_pm">PM</string>
+
+    <string name="btn_tl">Time Log</string>
+    <string name="btn_dl">Defect Log</string>
+    <string name="btn_pps">Project Plan Summary</string>
 </resources>

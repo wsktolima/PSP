@@ -52,8 +52,8 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.ListaVie
 
     @Override
     public void onClick(View v) {
-        if (!(listener == null)){
-            onClick(v);
+        if (listener!=null){
+            listener.onClick(v);
         }
     }
 
