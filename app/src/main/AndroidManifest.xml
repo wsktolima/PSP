@@ -21,6 +21,7 @@
         <activity android:name=".Activities.Formulariotimelog" />
 
         <activity android:name=".Activities.Formulariodefaultlog"></activity>
+        <activity android:name=".Activities.DefectLog"></activity>
     </application>
 
 </manifest>
