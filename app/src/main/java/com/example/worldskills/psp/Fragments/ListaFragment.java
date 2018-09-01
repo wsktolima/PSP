@@ -104,6 +104,9 @@ public class ListaFragment extends Fragment {
         return lista;
     }
 
+    /**
+     * Metodo que Carga la Lista de Proyectos Creados
+     */
     public void  llenarLista(){
 
         conexionDB = new ConexionDB(getContext(), "PSP",null, 1);

@@ -1,23 +1,21 @@
 package com.example.worldskills.psp.Activities;
 
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
-import com.example.worldskills.psp.Clases.Proyecto;
+
 import com.example.worldskills.psp.R;
 
 import java.io.Serializable;
 import java.util.Calendar;
-import java.util.TimeZone;
 
-import static java.lang.String.valueOf;
 
 public class MenuActivity extends AppCompatActivity {
 
+    private String nombre;
     TextView t;
     Calendar c;
 
@@ -36,11 +34,30 @@ public class MenuActivity extends AppCompatActivity {
         String tiempo = valueOf(hora) +  ":" +valueOf(min);
         t.setText(tiempo);*/
         Intent i = getIntent();
-        String nombre = i.getStringExtra("Nombre");
-        t.setText(nombre);
+        nombre = i.getStringExtra("Nombre");
+        t.setText(getNombre());
 
-        /*
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.set*/
+    }
+
+    /**
+     * Metodo Para Obtener el Nombre del Proyecto
+     * @return
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void irA(View view){
+        Intent i = null;
+
+        if(view.getId() == R.id.btn_TimeLog){
+            i = new Intent(getApplicationContext(), Formulariotimelog.class);
+        }if(view.getId() == R.id.btn_DefectLog){
+
+        }if(view.getId() == R.id.btn_ProjectPS){
+            i = null;
+        }
+
+        startActivity(i);
     }
 }

@@ -22,6 +22,11 @@ public class ConexionDB extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * Metodo para agregar Proyecto a La lista de Inicio
+     * @param db
+     * @param nombre
+     */
     public void agregarProyecto(SQLiteDatabase db, String nombre){
         db.execSQL("INSERT INTO Proyectos (nombreProyecto) VALUES ('" + nombre +"')");
     }
