@@ -27,7 +27,7 @@
             android:id="@+id/et_Fecha"
             android:layout_width="219sp"
             android:layout_height="wrap_content"
-
+            android:fontFamily="@font/constan"
             android:enabled="false"
             android:inputType="datetime"
             android:textColor="@android:color/background_dark" />

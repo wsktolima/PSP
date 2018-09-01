@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="@font/courbd"
+            android:fontFamily="@font/constan"
             android:hint="Nuevo proyecto"
             android:inputType="text"
             android:selectAllOnFocus="false"
