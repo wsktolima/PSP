@@ -120,7 +120,7 @@
         app:layout_constraintVertical_bias="0.116" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edstart"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="192dp"
@@ -134,7 +134,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edcomments"
         android:layout_width="243dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="152dp"
@@ -148,7 +148,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edinterruption"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -159,7 +159,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/edstart" />
 
     <Button
         android:id="@+id/button"
@@ -200,14 +200,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton10"
+            android:id="@+id/rbplan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="PLAN" />
 
         <RadioButton
-            android:id="@+id/radioButton9"
+            android:id="@+id/rbdld"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -215,28 +215,28 @@
             android:text="DLD" />
 
         <RadioButton
-            android:id="@+id/radioButton11"
+            android:id="@+id/rbcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="CODE" />
 
         <RadioButton
-            android:id="@+id/radioButton16"
+            android:id="@+id/rbcompile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="COMPILE" />
 
         <RadioButton
-            android:id="@+id/radioButton17"
+            android:id="@+id/rbut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="UT" />
 
         <RadioButton
-            android:id="@+id/radioButton18"
+            android:id="@+id/rbpm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -245,7 +245,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/edstop"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -259,7 +259,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/eddelta"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -270,6 +270,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintTop_toBottomOf="@+id/edstop" />
 
 </android.support.constraint.ConstraintLayout>
