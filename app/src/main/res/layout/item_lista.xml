@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/cour"
+                android:fontFamily="@font/pala"
                 android:text="@string/app_name"
                 android:textColor="@android:color/background_dark"
                 android:textSize="20sp"

@@ -1,8 +1,6 @@
 package com.example.worldskills.psp.Activities;
 
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,12 +37,12 @@ public class MenuActivity extends AppCompatActivity {
         nombre = i.getStringExtra("Nombre");
         t.setText(getNombre());
 
-        /*
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.set*/
-
-
     }
+
+    /**
+     * Metodo Para Obtener el Nombre del Proyecto
+     * @return
+     */
     public String getNombre() {
         return nombre;
     }
