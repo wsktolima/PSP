@@ -17,9 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.MenuActivity" />
+
         <activity android:name=".Activities.Formulariotimelog" />
-        <activity android:name=".Activities.Formulariodefaultlog" />
-        <activity android:name=".Activities.DefectLog"></activity>
+
+        <activity android:name=".Activities.Formulariodefaultlog"></activity>
     </application>
 
 </manifest>
