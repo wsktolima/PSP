@@ -36,7 +36,6 @@ public class MenuActivity extends AppCompatActivity {
         Intent i = getIntent();
         nombre = i.getStringExtra("Nombre");
         t.setText(getNombre());
-
     }
 
     /**
@@ -53,7 +52,7 @@ public class MenuActivity extends AppCompatActivity {
         if(view.getId() == R.id.btn_TimeLog){
             i = new Intent(getApplicationContext(), Formulariotimelog.class);
         }if(view.getId() == R.id.btn_DefectLog){
-
+            i = new Intent(getApplicationContext(), DefectLog.class);
         }if(view.getId() == R.id.btn_ProjectPS){
             i = null;
         }
